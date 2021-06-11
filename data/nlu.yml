@@ -1,0 +1,47 @@
+---
+nlu:
+- intent: "get_api_movie_{movie_id}_keywords"
+  examples: "- I want to get movie_{movie_id}_keywords\n- I want to use movie_{movie_id}_keywords\n"
+- intent: "parameters_list_movie_{movie_id}_keywords"
+  examples: "- I want to see the movie_{movie_id}_keywords parameters list\n- movie_{movie_id}_keywords\
+    \ parameters list\n"
+- intent: "fill_parameters_movie_{movie_id}_keywords"
+  examples: "- Fill in the movie_{movie_id}_keywords\n- Fill movie_{movie_id}_keywords\n"
+- intent: "get_api_movie_popular"
+  examples: "- I want to get movie_popular\n- I want to use movie_popular\n"
+- intent: "parameters_list_movie_popular"
+  examples: "- I want to see the movie_popular parameters list\n- movie_popular parameters\
+    \ list\n"
+- intent: "fill_parameters_movie_popular"
+  examples: "- Fill in the movie_popular\n- Fill movie_popular\n"
+- intent: "get_api_movie_{movie_id}"
+  examples: "- I want to get movie_{movie_id}\n- I want to use movie_{movie_id}\n"
+- intent: "parameters_list_movie_{movie_id}"
+  examples: "- I want to see the movie_{movie_id} parameters list\n- movie_{movie_id}\
+    \ parameters list\n"
+- intent: "fill_parameters_movie_{movie_id}"
+  examples: "- Fill in the movie_{movie_id}\n- Fill movie_{movie_id}\n"
+- intent: "get_api_movie_{movie_id}_similar"
+  examples: "- I want to get movie_{movie_id}_similar\n- I want to use movie_{movie_id}_similar\n"
+- intent: "parameters_list_movie_{movie_id}_similar"
+  examples: "- I want to see the movie_{movie_id}_similar parameters list\n- movie_{movie_id}_similar\
+    \ parameters list\n"
+- intent: "fill_parameters_movie_{movie_id}_similar"
+  examples: "- Fill in the movie_{movie_id}_similar\n- Fill movie_{movie_id}_similar\n"
+- intent: "get_api_movie_{movie_id}_credits"
+  examples: "- I want to get movie_{movie_id}_credits\n- I want to use movie_{movie_id}_credits\n"
+- intent: "parameters_list_movie_{movie_id}_credits"
+  examples: "- I want to see the movie_{movie_id}_credits parameters list\n- movie_{movie_id}_credits\
+    \ parameters list\n"
+- intent: "fill_parameters_movie_{movie_id}_credits"
+  examples: "- Fill in the movie_{movie_id}_credits\n- Fill movie_{movie_id}_credits\n"
+- intent: "inform"
+  examples: "- [517d5908dfa88aafe5f32cc3a06b5841](api_key)\n- [399566](movie_id)\n\
+    - [791373](movie_id)\n"
+- intent: "auto_get_location"
+  examples: "- Latitude of my current location is [25.130486599999998](auto_latitude),\
+    \ longitude of my current location is [121.73195779999999](auto_longitude)\n-\
+    \ Longitude is [121.736299](auto_longitude), latitude is [25.129253](auto_latitude)\n"
+- regex: "movie_id"
+  examples: "- [0-9]{5}\n- [0-9]{5}\n- [0-9]{5}\n- [0-9]{5}\n"
+version: "2.0"

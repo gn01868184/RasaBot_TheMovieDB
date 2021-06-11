@@ -1,0 +1,136 @@
+---
+rules:
+- rule: "Activate movie_{movie_id}_keywords_form"
+  steps:
+  - intent: "fill_parameters_movie_{movie_id}_keywords"
+  - action: "action_set_intent"
+  - action: "action_set_default"
+  - action: "movie_{movie_id}_keywords_form"
+  - active_loop: "movie_{movie_id}_keywords_form"
+- rule: "Submit movie_{movie_id}_keywords_form"
+  condition:
+  - active_loop: "movie_{movie_id}_keywords_form"
+  steps:
+  - action: "movie_{movie_id}_keywords_form"
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: "action_slots_values"
+  - action: "action_use_api"
+- rule: "See movie_{movie_id}_keywords parameters list"
+  steps:
+  - intent: "parameters_list_movie_{movie_id}_keywords"
+  - action: "action_slots_values"
+- rule: "Use movie_{movie_id}_keywords"
+  steps:
+  - intent: "get_api_movie_{movie_id}_keywords"
+  - action: "action_use_api"
+- rule: "Activate movie_popular_form"
+  steps:
+  - intent: "fill_parameters_movie_popular"
+  - action: "action_set_intent"
+  - action: "action_set_default"
+  - action: "movie_popular_form"
+  - active_loop: "movie_popular_form"
+- rule: "Submit movie_popular_form"
+  condition:
+  - active_loop: "movie_popular_form"
+  steps:
+  - action: "movie_popular_form"
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: "action_slots_values"
+  - action: "action_use_api"
+- rule: "See movie_popular parameters list"
+  steps:
+  - intent: "parameters_list_movie_popular"
+  - action: "action_slots_values"
+- rule: "Use movie_popular"
+  steps:
+  - intent: "get_api_movie_popular"
+  - action: "action_use_api"
+- rule: "Activate movie_{movie_id}_form"
+  steps:
+  - intent: "fill_parameters_movie_{movie_id}"
+  - action: "action_set_intent"
+  - action: "action_set_default"
+  - action: "movie_{movie_id}_form"
+  - active_loop: "movie_{movie_id}_form"
+- rule: "Submit movie_{movie_id}_form"
+  condition:
+  - active_loop: "movie_{movie_id}_form"
+  steps:
+  - action: "movie_{movie_id}_form"
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: "action_slots_values"
+  - action: "action_use_api"
+- rule: "See movie_{movie_id} parameters list"
+  steps:
+  - intent: "parameters_list_movie_{movie_id}"
+  - action: "action_slots_values"
+- rule: "Use movie_{movie_id}"
+  steps:
+  - intent: "get_api_movie_{movie_id}"
+  - action: "action_use_api"
+- rule: "Activate movie_{movie_id}_similar_form"
+  steps:
+  - intent: "fill_parameters_movie_{movie_id}_similar"
+  - action: "action_set_intent"
+  - action: "action_set_default"
+  - action: "movie_{movie_id}_similar_form"
+  - active_loop: "movie_{movie_id}_similar_form"
+- rule: "Submit movie_{movie_id}_similar_form"
+  condition:
+  - active_loop: "movie_{movie_id}_similar_form"
+  steps:
+  - action: "movie_{movie_id}_similar_form"
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: "action_slots_values"
+  - action: "action_use_api"
+- rule: "See movie_{movie_id}_similar parameters list"
+  steps:
+  - intent: "parameters_list_movie_{movie_id}_similar"
+  - action: "action_slots_values"
+- rule: "Use movie_{movie_id}_similar"
+  steps:
+  - intent: "get_api_movie_{movie_id}_similar"
+  - action: "action_use_api"
+- rule: "Activate movie_{movie_id}_credits_form"
+  steps:
+  - intent: "fill_parameters_movie_{movie_id}_credits"
+  - action: "action_set_intent"
+  - action: "action_set_default"
+  - action: "movie_{movie_id}_credits_form"
+  - active_loop: "movie_{movie_id}_credits_form"
+- rule: "Submit movie_{movie_id}_credits_form"
+  condition:
+  - active_loop: "movie_{movie_id}_credits_form"
+  steps:
+  - action: "movie_{movie_id}_credits_form"
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: "action_slots_values"
+  - action: "action_use_api"
+- rule: "See movie_{movie_id}_credits parameters list"
+  steps:
+  - intent: "parameters_list_movie_{movie_id}_credits"
+  - action: "action_slots_values"
+- rule: "Use movie_{movie_id}_credits"
+  steps:
+  - intent: "get_api_movie_{movie_id}_credits"
+  - action: "action_use_api"
+- rule: "Set location"
+  steps:
+  - intent: "auto_get_location"
+  - action: "action_auto_location"
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase  
+version: "2.0"

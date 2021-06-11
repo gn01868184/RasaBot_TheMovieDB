@@ -1,0 +1,86 @@
+---
+intents:
+- "get_api_movie_{movie_id}_keywords"
+- "parameters_list_movie_{movie_id}_keywords"
+- "fill_parameters_movie_{movie_id}_keywords"
+- "get_api_movie_popular"
+- "parameters_list_movie_popular"
+- "fill_parameters_movie_popular"
+- "get_api_movie_{movie_id}"
+- "parameters_list_movie_{movie_id}"
+- "fill_parameters_movie_{movie_id}"
+- "get_api_movie_{movie_id}_similar"
+- "parameters_list_movie_{movie_id}_similar"
+- "fill_parameters_movie_{movie_id}_similar"
+- "get_api_movie_{movie_id}_credits"
+- "parameters_list_movie_{movie_id}_credits"
+- "fill_parameters_movie_{movie_id}_credits"
+- "inform"
+- "auto_get_location"
+slots:
+  auto_latitude:
+    type: "text"
+  api_key:
+    type: "text"
+  auto_longitude:
+    type: "text"
+  movie_id:
+    type: "text"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+entities:
+- "api_key"
+- "movie_id"
+- "auto_latitude"
+- "auto_longitude"
+responses:
+  utter_ask_movie_id:
+  - text: "What movie_id do you want to search?"
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+version: "2.0"
+actions:
+- "action_slots_values"
+- "action_use_api"
+- "action_auto_location"
+- "action_set_default"
+- "action_set_intent"
+forms:
+  movie_popular_form:
+    required_slots:
+      api_key:
+      - type: "from_entity"
+        entity: "api_key"
+  movie_{movie_id}_form:
+    required_slots:
+      api_key:
+      - type: "from_entity"
+        entity: "api_key"
+      movie_id:
+      - type: "from_entity"
+        entity: "movie_id"
+  movie_{movie_id}_similar_form:
+    required_slots:
+      api_key:
+      - type: "from_entity"
+        entity: "api_key"
+      movie_id:
+      - type: "from_entity"
+        entity: "movie_id"
+  movie_{movie_id}_keywords_form:
+    required_slots:
+      api_key:
+      - type: "from_entity"
+        entity: "api_key"
+      movie_id:
+      - type: "from_entity"
+        entity: "movie_id"
+  movie_{movie_id}_credits_form:
+    required_slots:
+      api_key:
+      - type: "from_entity"
+        entity: "api_key"
+      movie_id:
+      - type: "from_entity"
+        entity: "movie_id"

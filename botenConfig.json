@@ -1,0 +1,155 @@
+{
+  "auto": {
+    "latitude,longitude": "",
+    "latitude": "",
+    "longitude": ""
+  },
+  "default": {"api_key": "517d5908dfa88aafe5f32cc3a06b5841"},
+  "movie_popular": {
+    "pathName": "/movie/popular",
+    "x-bot-jsonpPath-result": {
+      "result": [
+        {
+          "jsonPath": "$.results[*].id",
+          "title": "ID"
+        },
+        {
+          "jsonPath": "$.results[*].title",
+          "title": "title"
+        },
+        {
+          "jsonPath": "$.results[*].adult",
+          "title": "adult"
+        },
+        {
+          "jsonPath": "$.results[*].overview",
+          "title": "overview"
+        }
+      ],
+      "item": 5
+    },
+    "parameters": [{
+      "in": "query",
+      "name": "api_key"
+    }]
+  },
+  "movie_{movie_id}": {
+    "pathName": "/movie/{movie_id}",
+    "x-bot-jsonpPath-result": {
+      "result": [
+        {
+          "jsonPath": "$.title",
+          "title": "title"
+        },
+        {
+          "jsonPath": "$.adult",
+          "title": "adult"
+        },
+        {
+          "jsonPath": "$.overview",
+          "title": "overview"
+        },
+        {
+          "jsonPath": "$.popularity",
+          "title": "popularity"
+        },
+        {
+          "jsonPath": "$.status",
+          "title": "status"
+        }
+      ],
+      "item": 5
+    },
+    "parameters": [
+      {
+        "in": "path",
+        "name": "movie_id"
+      },
+      {
+        "in": "query",
+        "name": "api_key"
+      }
+    ]
+  },
+  "movie_{movie_id}_similar": {
+    "pathName": "/movie/{movie_id}/similar",
+    "x-bot-jsonpPath-result": {
+      "result": [
+        {
+          "jsonPath": "$.results[*].original_title",
+          "title": "original_title"
+        },
+        {
+          "jsonPath": "$.results[*].overview",
+          "title": "overview"
+        },
+        {
+          "jsonPath": "$.results[*].release_date",
+          "title": "release_date"
+        }
+      ],
+      "item": 5
+    },
+    "parameters": [
+      {
+        "in": "path",
+        "name": "movie_id"
+      },
+      {
+        "in": "query",
+        "name": "api_key"
+      }
+    ]
+  },
+  "movie_{movie_id}_keywords": {
+    "pathName": "/movie/{movie_id}/keywords",
+    "x-bot-jsonpPath-result": {
+      "result": [{
+        "jsonPath": "$.keywords[*].name",
+        "title": "name"
+      }],
+      "item": 5
+    },
+    "parameters": [
+      {
+        "in": "path",
+        "name": "movie_id"
+      },
+      {
+        "in": "query",
+        "name": "api_key"
+      }
+    ]
+  },
+  "movie_{movie_id}_credits": {
+    "pathName": "/movie/{movie_id}/credits",
+    "x-bot-jsonpPath-result": {
+      "result": [
+        {
+          "jsonPath": "$.cast[*].name",
+          "title": "name"
+        },
+        {
+          "jsonPath": "$.cast[*].character",
+          "title": "character"
+        },
+        {
+          "jsonPath": "$.cast[*].popularity",
+          "title": "popularity"
+        }
+      ],
+      "item": 5
+    },
+    "parameters": [
+      {
+        "in": "path",
+        "name": "movie_id"
+      },
+      {
+        "in": "query",
+        "name": "api_key"
+      }
+    ]
+  },
+  "url": "https://api.themoviedb.org/3"
+}
