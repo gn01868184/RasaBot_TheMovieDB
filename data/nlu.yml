@@ -1,40 +1,36 @@
 ---
 nlu:
 - intent: "get_api_movie_{movie_id}_keywords"
-  examples: "- I want to get movie_{movie_id}_keywords\n- I want to use movie_{movie_id}_keywords\n"
+  examples: "- I want to check the list of movies using keywords\n- I want to use\
+    \ query movies API using keywords\n"
 - intent: "parameters_list_movie_{movie_id}_keywords"
-  examples: "- I want to see the movie_{movie_id}_keywords parameters list\n- movie_{movie_id}_keywords\
-    \ parameters list\n"
-- intent: "fill_parameters_movie_{movie_id}_keywords"
-  examples: "- Fill in the movie_{movie_id}_keywords\n- Fill movie_{movie_id}_keywords\n"
+  examples: "- I want to view the parameters of the movie API using keywords\n- View\
+    \ the parameters of the movie API using keywords\n"
 - intent: "get_api_movie_popular"
-  examples: "- I want to get movie_popular\n- I want to use movie_popular\n"
+  examples: "- I want to check the list of popular movies\n- I want to use query popular\
+    \ movies API\n"
 - intent: "parameters_list_movie_popular"
-  examples: "- I want to see the movie_popular parameters list\n- movie_popular parameters\
-    \ list\n"
-- intent: "fill_parameters_movie_popular"
-  examples: "- Fill in the movie_popular\n- Fill movie_popular\n"
+  examples: "- I want to view the parameters of the popular movie API\n- View the\
+    \ parameters of the popular movie API\n- See the parameters of popular movie\n"
 - intent: "get_api_movie_{movie_id}"
-  examples: "- I want to get movie_{movie_id}\n- I want to use movie_{movie_id}\n"
+  examples: "- I want to check the list of movies information\n- I want to use query\
+    \ movies information API\n- Get movies details\n"
 - intent: "parameters_list_movie_{movie_id}"
-  examples: "- I want to see the movie_{movie_id} parameters list\n- movie_{movie_id}\
-    \ parameters list\n"
-- intent: "fill_parameters_movie_{movie_id}"
-  examples: "- Fill in the movie_{movie_id}\n- Fill movie_{movie_id}\n"
+  examples: "- I want to view the parameters of the movie information API\n- View\
+    \ the parameters of the movie information API\n- See the parameters of movie details\n"
 - intent: "get_api_movie_{movie_id}_similar"
-  examples: "- I want to get movie_{movie_id}_similar\n- I want to use movie_{movie_id}_similar\n"
+  examples: "- I want to check the list of similar movies\n- I want to use query similar\
+    \ movies API\n"
 - intent: "parameters_list_movie_{movie_id}_similar"
-  examples: "- I want to see the movie_{movie_id}_similar parameters list\n- movie_{movie_id}_similar\
-    \ parameters list\n"
-- intent: "fill_parameters_movie_{movie_id}_similar"
-  examples: "- Fill in the movie_{movie_id}_similar\n- Fill movie_{movie_id}_similar\n"
+  examples: "- I want to view the parameters of the similar movie keywords\n- View\
+    \ the parameters of the similar movie API\n"
 - intent: "get_api_movie_{movie_id}_credits"
-  examples: "- I want to get movie_{movie_id}_credits\n- I want to use movie_{movie_id}_credits\n"
+  examples: "- I want to check the list of movies credits\n- I want to use query movies\
+    \ credits API\n- I want to use query movies character API\n"
 - intent: "parameters_list_movie_{movie_id}_credits"
-  examples: "- I want to see the movie_{movie_id}_credits parameters list\n- movie_{movie_id}_credits\
-    \ parameters list\n"
-- intent: "fill_parameters_movie_{movie_id}_credits"
-  examples: "- Fill in the movie_{movie_id}_credits\n- Fill movie_{movie_id}_credits\n"
+  examples: "- I want to view the parameters of the movie credits API\n- View the\
+    \ parameters of the movie credits API\n- View the parameters of the movie character\
+    \ API\n"
 - intent: "inform"
   examples: "- [517d5908dfa88aafe5f32cc3a06b5841](api_key)\n- [399566](movie_id)\n\
     - [791373](movie_id)\n"
