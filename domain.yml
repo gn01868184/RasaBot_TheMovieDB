@@ -2,19 +2,14 @@
 intents:
 - "get_api_movie_{movie_id}_keywords"
 - "parameters_list_movie_{movie_id}_keywords"
-- "fill_parameters_movie_{movie_id}_keywords"
 - "get_api_movie_popular"
 - "parameters_list_movie_popular"
-- "fill_parameters_movie_popular"
 - "get_api_movie_{movie_id}"
 - "parameters_list_movie_{movie_id}"
-- "fill_parameters_movie_{movie_id}"
 - "get_api_movie_{movie_id}_similar"
 - "parameters_list_movie_{movie_id}_similar"
-- "fill_parameters_movie_{movie_id}_similar"
 - "get_api_movie_{movie_id}_credits"
 - "parameters_list_movie_{movie_id}_credits"
-- "fill_parameters_movie_{movie_id}_credits"
 - "inform"
 - "auto_get_location"
 slots:
@@ -38,7 +33,7 @@ responses:
   utter_ask_movie_id:
   - text: "What movie_id do you want to search?"
   utter_please_rephrase:
-  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
 version: "2.0"
 actions:
 - "action_slots_values"
